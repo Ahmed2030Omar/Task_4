@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_application_3/color_app.dart';
 
 class ResultView extends StatelessWidget {
@@ -33,30 +35,68 @@ class ResultView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: colorapp.background,
-      appBar: AppBar(
         backgroundColor: colorapp.background,
-        foregroundColor: Colors.white,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              getclassefication(),
-              style: TextStyle(
-                color: colorapp.green,
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
-            ),
-            Text(
-              result.toStringAsFixed(2),
-              style: const TextStyle(color: Colors.white, fontSize: 22),
-            ),
-          ],
+        // appBar: AppBar(
+        //   backgroundColor: colorapp.background,
+        //   foregroundColor: Colors.white,
+        //   title: const Text('Your Result'),
+        // ),
+        appBar: AppBar(
+          backgroundColor: colorapp.background,
         ),
-      ),
-    );
+        body: Padding(
+            padding: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Text(
+                  'Your Result',
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                // Recolculate
+                Container()
+              ],
+            )
+            //   padding: const EdgeInsets.all(10),
+            //   child: Expanded(
+            //     child: Column(
+            //       children: [
+            //         Container(
+            //           width: double.infinity,
+            //           height: 400,
+            //           decoration: BoxDecoration(color: colorapp.background),
+            //           child: (Text(
+            //             'Your result',
+            //             style: TextStyle(color: Colors.white, fontSize: 35),
+            //           )),
+            //         ),
+            //         SizedBox(
+            //           height: 20,
+            //         ),
+            //         Column(
+
+            //         )
+            //       ],
+            //     ),
+
+            //   ),
+
+            // ),
+
+            // Text(
+            //   getclassefication(),
+            //   style: TextStyle(
+            //     color: colorapp.green,
+            //     fontWeight: FontWeight.bold,
+            //     fontSize: 15,
+            //   ),
+            // ),
+            // Text(
+            //   result.toStringAsFixed(2),
+            //   style: const TextStyle(color: Colors.white, fontSize: 22),
+            // ),
+            ));
   }
 }
