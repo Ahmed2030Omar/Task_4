@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_5/login_view.dart';
+import 'package:flutter_application_5/signup_view.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,6 +12,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: LoginView());
+        debugShowCheckedModeBanner: false, home: LoginViewState());
   }
 }
